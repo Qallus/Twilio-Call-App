@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-md p-8">
+        <h1 class="text-2xl font-bold text-center mb-6">Create an Account</h1>
+        
+        <form>
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                <div class="relative">
+                    <input type="password" id="password" name="password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <span class="absolute right-3 top-2 cursor-pointer">
+                        <i class="fa fa-eye text-gray-500"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Register</button>
+        </form>
+        
+        <div class="mt-6">
+            <p class="text-center text-gray-600">Or sign up with</p>
+            <div class="flex justify-center mt-4 space-x-4">
+                <button class="flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-300">
+                    <img src="https://www.google.com/favicon.ico" alt="Google" class="w-6 h-6">
+                </button>
+                <button class="flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-300">
+                    <img src="https://www.microsoft.com/favicon.ico" alt="Microsoft" class="w-6 h-6">
+                </button>
+                <button class="flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-300">
+                    <img src="https://www.twitter.com/favicon.ico" alt="Twitter" class="w-6 h-6">
+                </button>
+                <button class="flex items-center justify-center w-12 h-12 border border-gray-300 rounded-full hover:bg-gray-50 transition duration-300">
+                    <img src="https://github.com/favicon.ico" alt="GitHub" class="w-6 h-6">
+                </button>
+            </div>
+        </div>
+        
+        <p class="text-center mt-8 text-gray-600">
+            Already have an account? <a href="login.html" class="text-blue-600 hover:underline">Log in</a>
+        </p>
+    </div>
+
+    <script>
+        document.querySelector('.fa-eye').addEventListener('click', function() {
+            const passwordInput = this.closest('div').querySelector('input');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>

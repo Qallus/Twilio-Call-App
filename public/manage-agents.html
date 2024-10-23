@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6">Manage Agents</h1>
+        
+        <div class="mb-4 flex justify-between items-center">
+            <div>
+                <button id="cardViewBtn" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Card View</button>
+                <button id="listViewBtn" class="bg-gray-300 text-gray-700 px-4 py-2 rounded">List View</button>
+            </div>
+            <input type="text" placeholder="Search agents..." class="border rounded px-4 py-2 w-64">
+        </div>
+
+        <div id="cardView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card view content will be inserted here -->
+        </div>
+
+        <div id="listView" class="hidden">
+            <table class="w-full bg-white shadow-md rounded">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+                        <th class="py-3 px-6 text-left">Agent</th>
+                        <th class="py-3 px-6 text-left">Status</th>
+                        <th class="py-3 px-6 text-left">Phone</th>
+                        <th class="py-3 px-6 text-left">Calls Answered</th>
+                        <th class="py-3 px-6 text-left">Email</th>
+                        <th class="py-3 px-6 text-left">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="listViewBody">
+                    <!-- List view content will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const agents = [
+            {
+                name: "John Doe",
+                status: "online",
+                phone: "(123) 456-7890",
+                callsAnswered: 150,
+                email: "john.doe@example.com",
+                photo: "https://placekitten.com/100/100",
+                voiceDemo: "path/to/john_demo.mp3"
+            },
+            {
+                name: "Jane Smith",
+                status: "offline",
+                phone: "(987) 654-3210",
+                callsAnswered: 120,
+                email: "jane.smith@example.com",
+                photo: "https://placekitten.com/100/100",
+                voiceDemo: "path/to/jane_demo.mp3"
+            },
+            // Add more agent objects as needed
+        ];
+
+        function createAgentCard(agent) {
+            return `
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="${agent.photo}" alt="${agent.name}" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h2 class="text-xl font-semibold">${agent.name}</h2>
+                            <p class="text-sm ${agent.status === 'online' ? 'text-green-500' : 'text-red-500'}">${agent.status}</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-phone mr-2"></i>${agent.phone}</p>
+                    <p><i class="fas fa-headset mr-2"></i>${agent.callsAnswered} calls answered</p>
+                    <p><i class="fas fa-envelope mr-2"></i>${agent.email}</p>
+                    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="playVoiceDemo('${agent.voiceDemo}')">
+                        <i class="fas fa-play mr-2"></i>Play Voice Demo
+                    </button>
+                </div>
+            `;
+        }
+
+        function createAgentRow(agent) {
+            return `
+                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                    <td class="py-3 px-6 text-left whitespace-nowrap">
+                        <div class="flex items-center">
+                            <img src="${agent.photo}" alt="${agent.name}" class="w-10 h-10 rounded-full mr-3">
+                            <span class="font-medium">${agent.name}</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-6 text-left">
+                        <span class="bg-${agent.status === 'online' ? 'green' : 'red'}-200 text-${agent.status === 'online' ? 'green' : 'red'}-600 py-1 px-3 rounded-full text-xs">${agent.status}</span>
+                    </td>
+                    <td class="py-3 px-6 text-left">${agent.phone}</td>
+                    <td class="py-3 px-6 text-left">${agent.callsAnswered}</td>
+                    <td class="py-3 px-6 text-left">${agent.email}</td>
+                    <td class="py-3 px-6 text-left">
+                        <button class="bg-blue-500 text-white px-3 py-1 rounded text-xs" onclick="playVoiceDemo('${agent.voiceDemo}')">
+                            <i class="fas fa-play mr-1"></i>Play Demo
+                        </button>
+                    </td>
+                </tr>
+            `;
+        }
+
+        function renderCardView() {
+            const cardView = document.getElementById('cardView');
+            cardView.innerHTML = agents.map(createAgentCard).join('');
+        }
+
+        function renderListView() {
+            const listViewBody = document.getElementById('listViewBody');
+            listViewBody.innerHTML = agents.map(createAgentRow).join('');
+        }
+
+        function playVoiceDemo(demoUrl) {
+            // Implement audio playback logic here
+            console.log(`Playing voice demo: ${demoUrl}`);
+            // You might want to use an audio player or modal for this
+        }
+
+        document.getElementById('cardViewBtn').addEventListener('click', function() {
+            document.getElementById('cardView').classList.remove('hidden');
+            document.getElementById('listView').classList.add('hidden');
+            this.classList.remove('bg-gray-300', 'text-gray-700');
+            this.classList.add('bg-blue-500', 'text-white');
+            document.getElementById('listViewBtn').classList.remove('bg-blue-500', 'text-white');
+            document.getElementById('listViewBtn').classList.add('bg-gray-300', 'text-gray-700');
+        });
+
+        document.getElementById('listViewBtn').addEventListener('click', function() {
+            document.getElementById('listView').classList.remove('hidden');
+            document.getElementById('cardView').classList.add('hidden');
+            this.classList.remove('bg-gray-300', 'text-gray-700');
+            this.classList.add('bg-blue-500', 'text-white');
+            document.getElementById('cardViewBtn').classList.remove('bg-blue-500', 'text-white');
+            document.getElementById('cardViewBtn').classList.add('bg-gray-300', 'text-gray-700');
+        });
+
+        // Initial render
+        renderCardView();
+        renderListView();
+    </script>
+</body>
+</html>

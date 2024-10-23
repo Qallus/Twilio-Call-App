@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="bg-blue-600 text-white p-4 flex items-center">
+                <img id="agentPhoto" src="" alt="Agent Photo" class="w-24 h-24 rounded-full mr-4 border-4 border-white">
+                <div>
+                    <h1 class="text-3xl font-bold" id="agentName">Agent Name</h1>
+                    <p class="text-xl" id="companyName">Company Name</p>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Contact Information</h2>
+                        <p><i class="fas fa-phone mr-2"></i><span id="phoneNumber"></span></p>
+                        <p><i class="fas fa-envelope mr-2"></i><span id="email"></span></p>
+                        <p><i class="fas fa-globe mr-2"></i><span id="website"></span></p>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold mb-4">Address</h2>
+                        <p id="address"></p>
+                        <p><span id="city"></span>, <span id="state"></span> <span id="zip"></span></p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h2 class="text-xl font-semibold mb-4">Technical Details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <p><strong>Phone Type:</strong> <span id="phoneType"></span></p>
+                        <p><strong>Network:</strong> <span id="network"></span></p>
+                        <p><strong>Internet Type:</strong> <span id="internetType"></span></p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h2 class="text-xl font-semibold mb-4">Voice Demo</h2>
+                    <audio id="voiceDemo" controls class="w-full">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // This script would typically fetch data from your backend
+        // For demonstration, we'll use placeholder data
+        const agentData = {
+            name: "John Doe",
+            company: "ABC Call Center",
+            phone: "(123) 456-7890",
+            email: "john.doe@abccallcenter.com",
+            website: "www.abccallcenter.com",
+            address: "123 Main St",
+            city: "Anytown",
+            state: "ST",
+            zip: "12345",
+            phoneType: "VoIP",
+            network: "Fiber Optic",
+            internetType: "Fiber",
+            photoUrl: "https://example.com/path/to/agent-photo.jpg",
+            voiceDemoUrl: "https://example.com/path/to/voice-demo.mp3"
+        };
+
+        // Populate the profile with data
+        document.getElementById('agentName').textContent = agentData.name;
+        document.getElementById('companyName').textContent = agentData.company;
+        document.getElementById('phoneNumber').textContent = agentData.phone;
+        document.getElementById('email').textContent = agentData.email;
+        document.getElementById('website').textContent = agentData.website;
+        document.getElementById('address').textContent = agentData.address;
+        document.getElementById('city').textContent = agentData.city;
+        document.getElementById('state').textContent = agentData.state;
+        document.getElementById('zip').textContent = agentData.zip;
+        document.getElementById('phoneType').textContent = agentData.phoneType;
+        document.getElementById('network').textContent = agentData.network;
+        document.getElementById('internetType').textContent = agentData.internetType;
+
+        // Set agent photo
+        document.getElementById('agentPhoto').src = agentData.photoUrl;
+
+        // Set voice demo
+        document.getElementById('voiceDemo').src = agentData.voiceDemoUrl;
+    </script>
+</body>
+</html>

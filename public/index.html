@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warmie Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans flex">
+    <nav class="sticky top-0 bg-gray-800 text-white w-80 h-screen p-4">
+        <!-- Flex container for logo and text -->
+        <div class="flex items-center mt-10 space-x-4">
+            <!-- Logo -->
+            <img src="https://qallus.co/wp-content/uploads/2024/03/Asset-2.svg" alt="Warmie.AI Logo" class="w-10 h-auto">
+           
+            <!-- Text next to the logo -->
+            <h1 class="text-2xl font-bold">Warmie.AI</h1>
+        </div>
+            <ul class="mt-40 space-y-8">
+                <!-- Rest of your menu items -->
+                <li>
+                    <a href="calls.html" class="flex items-center space-x-4 block text-white hover:text-blue-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                        </svg>
+                    <span>Calls</span>
+                </a>
+            </li>
+            <li>
+                <a href="transfers.html" class="flex items-center space-x-4 block text-white hover:text-blue-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                      </svg>
+                    <span>Transfers</span>
+                </a>
+            </li>
+            <li>
+                <a href="sms.html" class="flex items-center space-x-4 block text-white hover:text-blue-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                      </svg>                      
+                    <span>SMS</span>
+                </a>
+            </li>
+            <li>
+                <a href="emails.html" class="flex items-center space-x-4 block text-white hover:text-blue-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                      </svg>                      
+                    <span>Emails</span>
+                </a>
+            </li>
+            <li>
+                <a href="contacts.html" class="flex items-center space-x-4 block text-white hover:text-blue-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                      </svg>                      
+                    <span>Contacts</span>
+                </a>
+            </li>
+        <li>
+            <h2 class="text-md font-semibold uppercase text-gray-400 mb-8 mt-20">Tools</h2>
+            <ul class="space-y-6">
+                <li><a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-white">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span>Customer Calls</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-white">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span>Meetings 2.0</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-white">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <span>SMS Messages</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-white">
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                    <span>Emails</span>
+                </a></li>
+                <li><a href="#" class="flex items-center space-x-2 text-gray-300 hover:text-white">
+                    <span class="w-2 h-2 bg-pink-500 rounded-full"></span>
+                    <span>Video Calls</span>
+                </a></li>
+            </ul>
+        </div>
+<!-- Customer Profile Section Bottom Navigation -->
+    <div class="flex items-center space-x-4 mt-40">
+        <img src="https://qallus.co/wp-content/uploads/2024/07/Asset-1-50.jpg" alt="Profile" class="w-16 h-16 rounded-full">
+            <div>
+                <h2 class="text-lg font-bold">JWATERS</h2>
+                    <p class="text-purple-500">jwaters@qallus.co</p>
+                </div>
+            </div>
+        </nav>
+    </ul>
+</nav>
+    <main class="pl-20 pr-20 pt-20 flex-1">
+        <section class="pt-10 pb-2 mt-0 mb-4 bg-white p-8 rounded-lg shadow-lg"> <!-- Hero Padding & Margins -->
+            <h1 class="text-gray-800 text-6xl font-extrabold mb-2" style="font-size: 80px; font-family: 'Inter', sans-serif;">Who Should I Call? AI-Powered Phone System
+                </h1>
+                    <div class="flex items-center mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="margin-right: 15px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg>
+                                <p class="text-gray-500 text-lg" style="font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 400;">Outbound & inbound calls, call simulations, instant feedback, and powerful insights to help you close deals—faster.</p>
+                            </div>              
+                        <div class="flex space-x-8 mt-8 pb-8">
+                            <button class="bg-indigo-500 text-white px-16 py-3 rounded-lg font-bold hover:bg-indigo-700">Get Started</button>
+                                <button class="border-2 border-indigo-500 text-indigo-500 px-16 py-3 rounded-lg font-bold hover:bg-indigo-100 font-bold">Book Demo</button>
+                                    </section>
+                                </section>
+                                <div class="max-w-10xl mx-auto bg-white mt-8 p-8 rounded-lg shadow-md">
+                                    <!-- Header with Title and Button -->
+                                        <section>
+                                            <div class="flex justify-between items-center mb-10">
+                                                <div>
+                                                     <h2 class="text-2xl font-bold">Call & SMS Cue</h2>
+                                                        <p class="text-gray-600">A list of all the users in your account including their name, business, phone number, email, and role.</p>
+                                                    </div>
+                                                <button class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600"> Add user
+                                            </button>
+                                        </div>
+                                <!-- Table -->
+                                    <div class="overflow-x-auto">
+                                        <table class="min-w-full bg-white">
+                                            <thead>
+                                                <tr>
+                                                    <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Name (First & Last)</th>
+                                                    <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Business Name</th>
+                                                    <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Phone Number</th>
+                                                    <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Email</th>
+                                                    <th class="py-3 px-6 bg-gray-100 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Example Row 1 -->
+                                                <tr>
+                                                    <td class="py-4 px-6 border-b text-sm">John Doe</td>
+                                                    <td class="py-4 px-6 border-b text-sm">Doe Enterprises</td>
+                                                    <td class="py-4 px-6 border-b text-sm">555-123-4567</td>
+                                                    <td class="py-4 px-6 border-b text-sm">john.doe@example.com</td>
+                                                    <td class="py-4 px-6 border-b text-right text-sm">
+                                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                    </td>
+                                                </tr>
+                               
+                                                <!-- Example Row 2 -->
+                                                <tr>
+                                                    <td class="py-4 px-6 border-b text-sm">Jane Smith</td>
+                                                    <td class="py-4 px-6 border-b text-sm">Smith & Co.</td>
+                                                    <td class="py-4 px-6 border-b text-sm">555-987-6543</td>
+                                                    <td class="py-4 px-6 border-b text-sm">jane.smith@example.com</td>
+                                                    <td class="py-4 px-6 border-b text-right text-sm">
+                                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+        <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+            <section class="mb-8 pt-8">
+                <!-- Grid with 2 columns for larger screens, 1 column for smaller screens -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Call Form Card -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-between">
+                        <h1 class="text-2xl font-bold mb-4 text-center">Make a Call</h1>
+                        <form action="/make-call" method="POST" class="flex-grow">
+                            <div class="mb-6">
+                                <label for="phoneNumber" class="block text-gray-700">Phone Number (Call):</label>
+                                <input type="text" id="phoneNumber" name="phoneNumber" required
+                                       class="w-full px-8 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-2 rounded-lg">
+                                Call
+                            </button>
+                           
+                        </form>
+                        <form action="/make-call" method="POST" class="flex-grow"></form>
+                            <div class="mb-6">
+                                <label for="phoneNumber" class="block text-gray-700">Add Contacts (Upload):</label>
+                                <input type="text" id="phoneNumber" name="phoneNumber" required
+                                       class="w-full px-8 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <button type="submit" class="w-full bg-gray-800 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg">
+                                Upload Contacts
+                            </button>
+                        </form>
+                    </div>
+                    <!-- SMS Form Card -->
+                    <div class="bg-white p-14 rounded-lg shadow-lg flex flex-col justify-between">
+                        <h1 class="text-2xl font-bold mb-20 text-center">Send an SMS</h1>
+                        <form action="/send-sms" method="POST" class="flex-grow">
+                            <div class="mb-4">
+                                <label for="smsPhoneNumber" class="block text-gray-700">Phone Number (SMS):</label>
+                                <input type="text" id="smsPhoneNumber" name="smsPhoneNumber" required
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700">Message:</label>
+                                <textarea id="message" name="message" required
+                                          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                                </div>
+                            <button type="submit" class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                                Send SMS
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    <section class="mt-8 mb-12">
+        <section id="metrics" class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Live Transfers</h2>
+                    <p class="mt-2">Today's Transfers: <span id="liveTransfers" class="text-indigo-600 font-bold">21</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">SMS Open Rate</h2>
+                    <p class="mt-2">Open Rate: <span id="openRates" class="text-blue-600 font-bold">99%</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Service Fees</h2>
+                    <p class="mt-2">Daily Expense: <span id="serviceFees" class="text-green-500 font-bold">$36.52</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Daily Budget</h2>
+                    <p class="mt-2">Budget: <span id="dailyBudget" class="text-green-500 font-bold">$100.00</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Appointments</h2>
+                    <p class="mt-2">Appointments Booked: <span id="appointmentsBooked" class="text-blue-600 font-bold">5</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Missed Calls</h2>
+                    <p class="mt-2">Missed Calls: <span id="missedCalls" class="text-red-500 font-bold">1</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75 18 6m0 0 2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                  </svg>                  
+                </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Notifications</h2>
+                    <p class="mt-2">Alerts: <span id="agentNotifications" class="text-red-500 font-bold">2</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                  </svg>                  
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-semibold">Agent Messages</h2>
+                    <p class="mt-2">Messages: <span id="agentMessages" class="text-red-500 font-bold">0</span></p>
+                </div>
+                <!-- Insert the provided SVG icon here -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                  </svg>                  
+            </div>
+        </div>
+    </section>
+        <div class="max-w-10xl mx-auto bg-white mt-8 p-8 rounded-lg shadow-md">
+            <!-- Header with Title and Button -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold">New Leads</h2>
+                    <p class="text-gray-600">A list of all the new leads mapped from your website including their name, title, email, and role.</p>
+                </div>
+                <button class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600">
+                    Add user
+                </button>
+            </div>
+        <!-- Table -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Name (First & Last)</th>
+                            <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Business Name</th>
+                            <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Phone Number</th>
+                            <th class="py-3 px-6 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Email</th>
+                            <th class="py-3 px-6 bg-gray-100 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Row 1 -->
+                        <tr>
+                            <td class="py-4 px-6 border-b text-sm">John Doe</td>
+                            <td class="py-4 px-6 border-b text-sm">Doe Enterprises</td>
+                            <td class="py-4 px-6 border-b text-sm">555-123-4567</td>
+                            <td class="py-4 px-6 border-b text-sm">john.doe@example.com</td>
+                            <td class="py-4 px-6 border-b text-right text-sm">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                            </td>
+                        </tr>
+       
+                        <!-- Example Row 2 -->
+                        <tr>
+                            <td class="py-4 px-6 border-b text-sm">Jane Smith</td>
+                            <td class="py-4 px-6 border-b text-sm">Smith & Co.</td>
+                            <td class="py-4 px-6 border-b text-sm">555-987-6543</td>
+                            <td class="py-4 px-6 border-b text-sm">jane.smith@example.com</td>
+                            <td class="py-4 px-6 border-b text-right text-sm">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warmie.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-4">
+        <h1 class="text-2xl font-bold">Warmie.ai</h1>
+        <nav class="mt-4">
+            <ul class="flex space-x-4">
+                <li><a href="agents.html" class="text-white hover:text-blue-300">Agents</a></li>
+                <li><a href="leads.html" class="text-white hover:text-blue-300">Leads</a></li>
+                <li><a href="tasks.html" class="text-white hover:text-blue-300">Tasks</a></li>
+                <li><a href="activities.html" class="text-white hover:text-blue-300">Activities</a></li>
+                <li><a href="projects.html" class="text-white hover:text-blue-300">Projects</a></li>
+                <li><a href="emails.html" class="text-white hover:text-blue-300">Emails</a></li>
+                <li><a href="calls.html" class="text-white hover:text-blue-300">Calls</a></li>
+                <li><a href="sms.html" class="text-white hover:text-blue-300">SMS</a></li>
+                <li><a href="appointments.html" class="text-white hover:text-blue-300">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-8">
+        <section id="metrics" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Agents</h2>
+                <p class="mt-2">Total: <span id="totalAgents" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Leads</h2>
+                <p class="mt-2">Total: <span id="totalLeads" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Tasks</h2>
+                <p class="mt-2">Pending: <span id="pendingTasks" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projects</h2>
+                <p class="mt-2">Active: <span id="activeProjects" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Appointments</h2>
+                <p class="mt-2">Upcoming: <span id="upcomingAppointments" class="text-blue-600 font-bold">0</span></p>
+            </div>
+        </section>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

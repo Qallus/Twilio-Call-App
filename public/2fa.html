@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA Verification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-md p-8">
+        <h1 class="text-2xl font-bold text-center mb-2">Log In</h1>
+        <p class="text-center text-gray-600 mb-6">We have sent a verification code to your inbox</p>
+        
+        <form>
+            <div class="flex justify-center space-x-2 mb-6">
+                <input type="text" maxlength="1" class="w-12 h-12 text-center text-2xl border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="text" maxlength="1" class="w-12 h-12 text-center text-2xl border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="text" maxlength="1" class="w-12 h-12 text-center text-2xl border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="text" maxlength="1" class="w-12 h-12 text-center text-2xl border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Verify Code</button>
+        </form>
+        
+        <p class="text-center text-xs text-gray-500 mt-4">
+            This site is protected by reCAPTCHA and the Google Privacy Policy
+        </p>
+    </div>
+
+    <script>
+        // Auto-focus next input field
+        const inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', function() {
+                if (this.value.length === this.maxLength) {
+                    if (index < inputs.length - 1) {
+                        inputs[index + 1].focus();
+
+                
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

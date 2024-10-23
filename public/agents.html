@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans flex">
+    <nav class="bg-blue-600 text-white w-64 h-screen p-4">
+        <h1 class="text-2xl font-bold mb-6">Agents</h1>
+        <ul class="space-y-4">
+            <li><a href="agents.html" class="block text-white hover:text-blue-300">Agents</a></li>
+            <li><a href="leads.html" class="block text-white hover:text-blue-300">Leads</a></li>
+            <li><a href="tasks.html" class="block text-white hover:text-blue-300">Tasks</a></li>
+            <li><a href="activities.html" class="block text-white hover:text-blue-300">Activities</a></li>
+            <li><a href="projects.html" class="block text-white hover:text-blue-300">Projects</a></li>
+            <li><a href="emails.html" class="block text-white hover:text-blue-300">Emails</a></li>
+            <li><a href="calls.html" class="block text-white hover:text-blue-300">Calls</a></li>
+            <li><a href="sms.html" class="block text-white hover:text-blue-300">SMS</a></li>
+            <li><a href="appointments.html" class="block text-white hover:text-blue-300">Appointments</a></li>
+        </ul>
+    </nav>
+    <main class="p-8 flex-1">
+        <section class="mb-12">
+            <h1 class="text-6xl font-extrabold mb-4" style="font-size: 80px; font-family: 'Inter', sans-serif;">Manage Your Agents</h1>
+            <p class="text-lg mb-6" style="font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 400;">Preview, add, edit & remove your live agents and AI agents in one place.</p>
+            <div class="flex space-x-4">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold">Get Started</button>
+                <button class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-bold">Learn More</button>
+            </div>
+        </section>
+        <section id="metrics" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Contacts</h2>
+                <p class="mt-2">Total: <span id="totalContacts" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Leads</h2>
+                <p class="mt-2">Total: <span id="totalLeads" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Tasks</h2>
+                <p class="mt-2">Pending: <span id="pendingTasks" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Projects</h2>
+                <p class="mt-2">Active: <span id="activeProjects" class="text-blue-600 font-bold">0</span></p>
+            </div>
+            <div class="metric bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold">Appointments</h2>
+                <p class="mt-2">Upcoming: <span id="upcomingAppointments" class="text-blue-600 font-bold">0</span></p>
+            </div>
+        </section>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

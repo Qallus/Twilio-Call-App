@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Center Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans h-screen flex">
+    <!-- Sidebar -->
+    <nav class="bg-gray-800 text-white w-20 flex flex-col items-center py-6">
+        <!-- Add icons inside these divs -->
+        <div class="my-4">
+            <!-- Logo -->
+            <img src="https://qallus.co/wp-content/uploads/2024/03/Asset-2.svg" alt="Warmie.AI Logo" class="w-10 h-auto">
+        </div>
+        <!-- Repeat for other icons -->
+        <a href="manage-agents.html" class="text-blue-600 hover:text-blue-800">Manage Agents</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+        <!-- Top Info Cards -->
+        <div class="grid grid-cols-4 gap-6 mb-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Agents Available</h3>
+                <p class="text-3xl font-bold text-green-500">12</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Agents On Call</h3>
+                <p class="text-3xl font-bold text-blue-500">5</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Agents Away</h3>
+                <p class="text-3xl font-bold text-red-500">3</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Active Calls</h3>
+                <p class="text-3xl font-bold">5</p>
+            </div>
+        </div>
+
+        <!-- Agent Activity Section -->
+        <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Agent Activity</h3>
+                <table class="w-full mt-4 text-left">
+                    <thead>
+                        <tr>
+                            <th class="px-2 py-1">Agent</th>
+                            <th class="px-2 py-1">Inbound</th>
+                            <th class="px-2 py-1">Outbound</th>
+                            <th class="px-2 py-1">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-2 py-1">Chris</td>
+                            <td class="px-2 py-1">7</td>
+                            <td class="px-2 py-1">10</td>
+                            <td class="px-2 py-1">17</td>
+                        </tr>
+                        <tr>
+                            <td class="px-2 py-1">Jeremy</td>
+                            <td class="px-2 py-1">7</td>
+                            <td class="px-2 py-1">10</td>
+                            <td class="px-2 py-1">17</td>
+                        </tr>
+                        <!-- Repeat for other agents -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Active Calls Section -->
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold">Active Calls (Real-Time)</h3>
+                <table class="w-full mt-4 text-left">
+                    <thead>
+                        <tr>
+                            <th class="px-2 py-1">Type</th>
+                            <th class="px-2 py-1">ID</th>
+                            <th class="px-2 py-1">Contact Number</th>
+                            <th class="px-2 py-1">Via</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-2 py-1">N/A</td>
+                            <td class="px-2 py-1">084567</td>
+                            <td class="px-2 py-1">116439929</td>
+                            <td class="px-2 py-1">IP</td>
+                        </tr>
+                        <!-- Repeat for other calls -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<div class="bg-gray-800 text-white mt-4 p-4 rounded-lg">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold">DIAL PAD</h2>
+        <div class="flex space-x-4">
+            <!-- Settings icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-14">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+              <!-- Gear Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-14">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+              </svg>
+              <!-- Gear Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-14 w-14">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.375a9.375 9.375 0 11-9.375 9.375 9.375 9.375 0 019.375-9.375z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Dropdown for Outbound Caller ID -->
+    <div class="mb-10">
+        <label for="outboundCallerId" class="block text-sm mb-1">Select Outbound Caller ID</label>
+        <select id="outboundCallerId" class="w-full bg-gray-700 p-2 rounded-lg">
+            <option value="">Select Outbound Caller ID</option>
+            <option value="1">Caller ID 1</option>
+            <option value="2">Caller ID 2</option>
+            <option value="3">Caller ID 3</option>
+            <option value="4">Caller ID 4</option>
+        </select>
+    </div>
+
+    <!-- Country and Phone Input -->
+    <div class="relative">
+        <!-- Flag Icon -->
+        <span class="absolute inset-y-3 pt-8 left-0 flex items-center pl-3">
+            <img src="https://flagcdn.com/16x12/us.png" alt="US Flag" class="w-6 h-auto">
+        </span>
+    
+        <!-- Phone Number Input Field -->
+                 <!-- Label for phone number field -->
+        <label for="phoneNumber" class="block text-sm font-medium text-gray-100 mb-2">Phone Number</label>
+        <input 
+            type="text" 
+            placeholder="Enter phone number" 
+            class="pl-12 w-full p-2 border rounded-lg bg-gray-700 text-white" 
+        />
+    </div>
+
+    <!-- Extension Input -->
+    <div class="relative mt-4 mb-8">
+        <!-- Label for extension field -->
+        <label for="extension" class="block text-sm font-medium text-gray-100 mb-2">Extension</label>
+    
+        <!-- Extension input field allowing text and numbers -->
+        <input 
+            type="tel" 
+            id="extension" 
+            name="extension" 
+            placeholder="Enter extension" 
+            class="w-full p-2 border rounded-lg bg-gray-700 text-white" 
+            pattern="[0-9]*"
+            inputmode="tel"
+        />
+    </div>
+
+    <!-- Dialpad -->
+    <div class="grid grid-cols-3 gap-2 mb-10">
+        <button class="bg-purple-500  py-8 rounded-lg text-white">1</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">2 ABC</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">3 DEF</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">4 GHI</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">5 JKL</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">6 MNO</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">7 PQRS</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">8 TUV</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">9 WXYZ</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">#</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">0</button>
+        <button class="bg-purple-500  py-8 rounded-lg text-white">*</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="space-y-6">
+        <button class="bg-green-600 py-3 w-full rounded-lg text-white font-bold">Dial Now</button>
+        <button class="bg-purple-500 py-3 w-full rounded-lg text-white font-bold">Use AI Voice</button>
+        <button class="bg-purple-200 py-3 w-full rounded-lg text-gray-900 font-bold">Use Live Agent Voice</button>
+        <button class="bg-gray-500 py-3 w-full rounded-lg text-white font-bold">Call Script</button>
+        <button class="bg-gray-900 py-3 w-full rounded-lg text-white font-bold">Add New Activity</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-md p-8">
+        <h1 class="text-2xl font-bold text-center mb-2">Log In</h1>
+        <p class="text-center text-gray-600 mb-6">Let's get started with your 30 days free trial</p>
+        
+        <form>
+            <div class="mb-4">
+                <input type="email" placeholder="Email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <div class="mb-6 relative">
+                <input type="password" placeholder="Password" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <span class="absolute right-3 top-2.5 text-gray-400 cursor-pointer">
+                    <i class="far fa-eye"></i>
+                </span>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Login</button>
+        </form>
+        
+        <p class="text-center text-sm text-gray-600 mt-4">
+            <a href="#" class="hover:underline">Forgotten Password?</a>
+        </p>
+        
+        <div class="mt-6">
+            <p class="text-center text-sm text-gray-600 mb-4">or Log in with</p>
+            
+            <button class="w-full mb-3 flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-300">
+                <img src="https://www.google.com/favicon.ico" alt="Google" class="w-5 h-5 mr-2">
+                Sign up with Google
+            </button>
+            
+            <button class="w-full mb-3 flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-300">
+                <img src="https://www.microsoft.com/favicon.ico" alt="Microsoft" class="w-5 h-5 mr-2">
+                Sign up with Microsoft
+            </button>
+            
+            <button class="w-full mb-3 flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-300">
+                <img src="https://twitter.com/favicon.ico" alt="Twitter" class="w-5 h-5 mr-2">
+                Sign up with Twitter
+            </button>
+            
+            <button class="w-full mb-3 flex items-center justify-center py-2 px-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-300">
+                <img src="https://github.com/favicon.ico" alt="GitHub" class="w-5 h-5 mr-2">
+                Sign up with Github
+            </button>
+        </div>
+        
+        <p class="text-center text-sm text-gray-600 mt-6">
+            Don't have an account yet? <a href="register.html" class="text-blue-600 hover:underline">
